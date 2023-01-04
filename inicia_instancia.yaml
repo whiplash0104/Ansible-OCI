@@ -1,0 +1,11 @@
+---
+- name: Prende instancia
+  hosts: localhost
+  connection: local
+  vars_file: vault.yaml
+
+  tasks:
+  - name: Prende servidor
+    oracle.oci.oci_compute_instance_actions:
+      id: "{{ instancia_vm }}"
+      action: "start"
