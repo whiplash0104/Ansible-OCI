@@ -1,0 +1,11 @@
+---
+- name: Apaga Instancia
+  hosts: localhost
+  connection: local
+  vars_files: vault.yaml
+
+  tasks:
+  - name: Apaga Servidor
+    oracle.oci.oci_compute_instance_actions:
+      id: "{{ instancia_vm }}"
+      action: "stop"
