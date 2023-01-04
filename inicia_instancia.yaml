@@ -2,7 +2,7 @@
 - name: Prende instancia
   hosts: localhost
   connection: local
-  vars_file: vault.yaml
+  vars_files: vault.yaml
 
   tasks:
   - name: Prende servidor
